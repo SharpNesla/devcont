@@ -1,17 +1,25 @@
 {
-    "name": "Development Container",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {}
+  "name": "Development Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.3": {},
+    "ghcr.io/shyim/devcontainers-features/bun:0": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "ms-azuretools.vscode-docker"
+      ]
     },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-kubernetes-tools.vscode-kubernetes-tools",
-                "ms-azuretools.vscode-docker"
-            ]
-        }
-    },
-    "remoteUser": "root",
-} 
+    "jetbrains": {
+      "backend": "WebStorm",
+      "plugins": [
+        "com.intellij.kubernetes"
+      ],
+    }
+  },
+  "remoteUser": "root",
+}
