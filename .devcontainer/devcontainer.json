@@ -4,6 +4,10 @@
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/prulloac/devcontainer-features/bun:1": {},
+    "ghcr.io/rio/features/k3d:1": {},
+    "ghcr.io/rio/features/skaffold:2": {},
+    "ghcr.io/prulloac/devcontainer-features/bun:1": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
   "customizations": {
